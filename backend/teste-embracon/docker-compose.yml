@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  teste-embracon-backend:
+    image: teste-embracon-backend:1.0.0
+    container_name: teste-embracon-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USERNAME: embracon
+      DB_PASSWORD: teste
+      FRONTEND_URL: http://localhost:5173
+  db:
+    image: mysql:8.0
+    container_name: teste-embracon-db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: embracon
+      MYSQL_USER: embracon
+      MYSQL_PASSWORD: teste
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

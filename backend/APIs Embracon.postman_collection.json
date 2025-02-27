@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "99ef1261-10f5-4f16-af81-0fcb43aead77",
+		"name": "APIs Embracon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12488482"
+	},
+	"item": [
+		{
+			"name": "Consulta CEP + Registrar Log",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Lista de valores para o Path Parameter\r",
+							"const valores = [\"01001000\",\r",
+							"\"01310100\",\r",
+							"\"04094050\",\r",
+							"\"18095410\",\r",
+							"\"11065201\",\r",
+							"\"20031144\",\r",
+							"\"22041001\",\r",
+							"\"23059150\",\r",
+							"\"28905310\",\r",
+							"\"27580000\",\r",
+							"\"30190060\",\r",
+							"\"36026340\",\r",
+							"\"38400228\",\r",
+							"\"39401453\",\r",
+							"\"35500072\",\r",
+							"\"80010000\",\r",
+							"\"87083070\",\r",
+							"\"85851180\",\r",
+							"\"84010350\",\r",
+							"\"86026340\",\r",
+							"\"90010260\",\r",
+							"\"97574000\",\r",
+							"\"97015330\",\r",
+							"\"95590000\",\r",
+							"\"92020290\",\r",
+							"\"88010400\",\r",
+							"\"89010970\",\r",
+							"\"88330668\",\r",
+							"\"89802140\",\r",
+							"\"89252600\",\r",
+							"\"40020010\",\r",
+							"\"44001208\",\r",
+							"\"45653240\",\r",
+							"\"48905260\",\r",
+							"\"45988048\",\r",
+							"\"50010100\",\r",
+							"\"52061380\",\r",
+							"\"56304450\",\r",
+							"\"55032005\",\r",
+							"\"53030150\",\r",
+							"\"60025101\",\r",
+							"\"62030030\",\r",
+							"\"63100010\",\r",
+							"\"62800000\",\r",
+							"\"63500200\",\r",
+							"\"74015110\",\r",
+							"\"72810000\",\r",
+							"\"75701370\",\r",
+							"\"75908750\",\r",
+							"\"75135000\",\r",
+							"\"69005020\",\r",
+							"\"69460000\",\r",
+							"\"69800000\",\r",
+							"\"69250000\",\r",
+							"\"69400000\"\r",
+							"]; // Substitua pelos valores desejados\r",
+							"\r",
+							"// Obtém o índice atual do teste\r",
+							"let index = pm.environment.get(\"index\") || 0;\r",
+							"\r",
+							"// Converte para número (caso seja string)\r",
+							"index = Number(index);\r",
+							"\r",
+							"// Se ainda houver valores para testar\r",
+							"if (index < valores.length) {\r",
+							"    // Define o próximo valor do Path Parameter\r",
+							"    pm.variables.set(\"parametro\", valores[index]);\r",
+							"\r",
+							"    // Atualiza o índice e armazena no ambiente\r",
+							"    pm.environment.set(\"index\", index + 1);\r",
+							"\r",
+							"    // Reexecuta a requisição automaticamente\r",
+							"    postman.setNextRequest(pm.request.name);\r",
+							"} else {\r",
+							"    // Se acabou a lista, resetar o índice\r",
+							"    pm.environment.set(\"index\", 0);\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "www.localhost:8080/cep/consulta-cep/{{parametro}}",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cep",
+						"consulta-cep",
+						"{{parametro}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Logs por Uf",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "www.localhost:8080/log/buscar-por-uf?uf=SP",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"log",
+						"buscar-por-uf"
+					],
+					"query": [
+						{
+							"key": "uf",
+							"value": "SP"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Todos Logs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "www.localhost:8080/log/buscar-todos",
+					"host": [
+						"www",
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"log",
+						"buscar-todos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,8 @@
+CREATE DATABASE embracon;
+USE embracon;
+CREATE TABLE log (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    cep CHAR(8),
+    uf VARCHAR(2),
+    dt_hr_consulta TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

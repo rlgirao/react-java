@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  teste-embracon:
+    image: teste-embracon:1.0.0
+    container_name: teste-embracon
+    build:
+      context: .
+    ports:
+      - "5173:80"
+    env_file:
+      - .env
+    restart: unless-stopped
+

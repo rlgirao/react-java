@@ -1,0 +1,7 @@
+https://dev.mysql.com/downloads/installer/
+MySQL 8.0.41
+Spring 3.4.3
+Java 17
+Dependências: Spring Data JPA SQL, Spring Web, MySQL Driver SQL, Spring Boot DevTools
+Classe main: TesteApplication.
+
