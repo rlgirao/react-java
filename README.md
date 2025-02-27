@@ -1,4 +1,4 @@
-# Projeto Embracon
+# Projeto CEP e Logs (React-Vite com Java-Spring)
 
 Este repositório contém dois projetos: um frontend em React e um backend em Java (Spring Boot). Abaixo estão as instruções para rodar ambos os projetos e acessar a documentação da API.
 
