@@ -24,8 +24,8 @@ Certifique-se de ter os seguintes softwares instalados em sua máquina:
 
 1. Navegue até o diretório do projeto frontend:
 
-   ```sh
-   cd frontend
+  ```sh
+  cd frontend
 
 2. Execute o comando no terminal:
 
