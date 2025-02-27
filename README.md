@@ -16,6 +16,7 @@ Certifique-se de ter os seguintes softwares instalados em sua máquina:
 - [Node.js](https://nodejs.org/) (versão 20 ou superior)
 - [IDE React](https://code.visualstudio.com/docs/setup/windows) (Rodar frontend)
 - [IDE Java](https://eclipseide.org/) (Rodar backend)
+- [JDK](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) (versão 17)
 - [MySql](https://www.mysql.com/downloads/) (Banco de dados)
 - [SGBD](https://dbeaver.io/download/) (Acessar banco de dados)
 - [Requisições](https://www.postman.com/downloads/) (Consumir apis)
