@@ -26,11 +26,13 @@ Certifique-se de ter os seguintes softwares instalados em sua máquina:
 
   ```sh
   cd frontend
+  ```
 
 2. Execute o comando no terminal:
 
   ```sh
   docker-compose up -d --build
+  ```
 
 3. Para verificar se o projeto esta rodando pode executar os seguintes comandos:
 
@@ -38,11 +40,13 @@ Certifique-se de ter os seguintes softwares instalados em sua máquina:
 
   ```sh
   docker ps
+  ```
 
 - Após pegar o nome da imagem execute o comando abaixo para exibir os logs:
 
   ```sh
   docker logs -f nome-imagem
+  ```
 
 4. Acesse a url no seu frontend:
 
@@ -52,14 +56,16 @@ Certifique-se de ter os seguintes softwares instalados em sua máquina:
 
 1. Navegue até o diretório do projeto backend:
 
-   ```sh
-   cd backend
-   cd teste-embracon
+  ```sh
+  cd backend
+  cd teste-embracon
+  ```
 
 2. Execute o comando no terminal:
 
   ```sh
   docker-compose up -d --build
+  ```
 
 3. Para verificar se o projeto esta rodando pode executar os seguintes comandos:
 
@@ -67,11 +73,13 @@ Certifique-se de ter os seguintes softwares instalados em sua máquina:
 
   ```sh
   docker ps
+  ```
 
 - Após pegar o nome da imagem execute o comando abaixo para exibir os logs:
 
   ```sh
   docker logs -f nome-imagem
+  ```
 
 4. Acesse a url no seu backend:
 
@@ -81,18 +89,21 @@ Certifique-se de ter os seguintes softwares instalados em sua máquina:
 
 1. Navegue até o diretório do projeto frontend:
 
-   ```sh
-   cd frontend
+  ```sh
+  cd frontend
+  ```
 
 2. Instale as dependências do projeto:
 
-   ```sh
-   npm install
+  ```sh
+  npm install
+  ```
 
 3. Inicie o servidor de desenvolvimento:
 
-   ```sh
-   npm run dev
+  ```sh
+  npm run dev
+  ```
 
 4. Acesse a url no seu fontend:
 
@@ -102,9 +113,10 @@ Certifique-se de ter os seguintes softwares instalados em sua máquina:
 
 1. Navegue até o diretório do projeto backend:
 
-   ```sh
-   cd backend
-   cd teste-embracon
+  ```sh
+  cd backend
+  cd teste-embracon
+  ```
 
 2. Acesse o seu workspace no eclipse e limpe o cache e atualize as dependencias Maven
 
@@ -116,13 +128,15 @@ Certifique-se de ter os seguintes softwares instalados em sua máquina:
 
 1. Navegue até o diretório do projeto backend:
 
-   ```sh
-   cd backend
+  ```sh
+  cd backend
+  ```
 
 2. Utilize o SGBD de sua preferencia e acesse seu banco de dados e execute o script de criação das tabelas:
 
   ```sh
   criacao-tabela.sql
+  ```
 
 3. Em caso de duvidas as credenciais do banco de dados estão no arquivo de docker-compose e application-properties.
 
@@ -131,11 +145,13 @@ Certifique-se de ter os seguintes softwares instalados em sua máquina:
 
 1. Navegue até o diretório do projeto backend:
 
-   ```sh
-   cd backend
+  ```sh
+  cd backend
+  ```
 
 2. A collection com todas as apis estão nesse diretorio, é só importar dentro da sua ferramenta de requisição:
 
-   ```sh
-   APIs Embracon.postman_collection.json
+  ```sh
+  APIs Embracon.postman_collection.json
+  ```
 
